@@ -22,7 +22,7 @@
                                 &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &kp U              &kp I              &kp O                         &rpi ESCAPE P      
                                 &kp A             &kp S               &kp D                  &kp F                   &kp G                            &kp H                    &kp J              &kp K              &kp L                         &rpi_fast TAB SEMI
                                 &kp Z             &kp X               &kp C                  &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N              &kp M              &tap_comma_mods               &tap_dot_ret      
-                                                                      &kp LCTRL              &kp LCMD                &shift_caps_tap                  &rpi RET SPACE           &tap_code          &mo MODS
+                                                                      &kp LCTRL              &kp LCMD                &shift_caps_tap                  &rpi RET SPACE           &tap_code          &tog MODS
                         >;
                 };
                 code_layer {
