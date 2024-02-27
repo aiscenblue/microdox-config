@@ -22,14 +22,14 @@
                                 &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &kp U              &kp I              &kp O                         &rpi ESCAPE P      
                                 &kp A             &kp S               &kp D                  &kp F                   &kp G                            &kp H                    &kp J              &kp K              &kp L                         &rpi_fast TAB SEMI
                                 &kp Z             &kp X               &kp C                  &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N              &kp M              &tap_comma_mods               &tap_dot_ret      
-                                                                      &kp LCTRL              &kp LCMD                &shift_caps_tap                  &rpi RET SPACE           &tap_code          &mo MODS
+                                                                      &kp LCTRL              &kp LCMD                &shift_caps_tap                  &tap_code                &rpi RET SPACE     &mo MODS
                         >;
                 };
                 code_layer {
                         bindings = <
                                    &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                         &kp BSLH                 &kp SLASH                &kp LPAR               &kp RPAR    &kp EQUAL  
                                    &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                         &kp LT                   &kp GT                   &kp LBRC               &kp RBRC     &kp DQT
-                                   &kp LCTRL     &kp LALT       &kp LSHIFT      &kp LCMD          &trans                         &kp CARET                &trans                   &trans                 &kp GRAVE   &kp MINUS
+                                   &kp LCTRL     &kp LALT       &kp LSHIFT      &kp LCMD          &trans                         &kp CARET                &kp HASH                 &kp AMPERSAND           &kp GRAVE   &kp MINUS
                                                                 &trans          &trans            &trans                         &trans                   &trans                   &trans
                         >;
                 };
