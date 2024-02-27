@@ -46,7 +46,7 @@
 
                 mods_layer {
                         bindings = <
-                                   &trans      &trans      &trans        &trans          &trans                               &trans       &kp C_VOLUME_UP            &arrow_rpi PAGE_UP UP           &kp C_VOLUME_UP            &trans
+                                   &trans      &trans      &trans        &trans          &trans                               &trans       &kp C_VOLUME_DOWN          &arrow_rpi PAGE_UP UP           &kp C_VOLUME_UP            &trans
                                    &trans      &trans      &trans        &trans          &trans                               &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &trans
                                    &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &trans                          &trans                     &trans
                                                            &kp TAB       &kp LALT        &mo DOTA_SHIFT                       &trans       &trans                     &trans
