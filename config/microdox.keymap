@@ -27,9 +27,9 @@
                 };
                 code_layer {
                         bindings = <
-                                   &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                         &rpi_fast EXCL BSLH      &rpi_fast QMARK SLASH    &kp LPAR               &kp RPAR                &rpi_fast PLUS EQUAL  
-                                   &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                         &rpi_fast PIPE LT        &rpi_fast CARET GT       &rpi_fast LBKT LBRC    &rpi_fast RBKT RBRC     &rpi_fast SEMI COLON 
-                                   &kp LCTRL     &kp LALT       &kp LSHIFT      &kp LCMD          &trans                         &rpi_fast SQT DQT        &trans                   &trans                 &rpi_fast TILDE GRAVE   &rpi_fast UNDER MINUS
+                                   &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                         &kp BSLH                 &kp SLASH                &kp LPAR               &kp RPAR    &kp EQUAL  
+                                   &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                         &kp LT                   &kp GT                   &kp LBRC               &kpRBRC     &kp DQT
+                                   &kp LCTRL     &kp LALT       &kp LSHIFT      &kp LCMD          &trans                         &kp CARET                &trans                   &trans                 &kp GRAVE   &kp MINUS
                                                                 &trans          &trans            &trans                         &trans                   &trans                   &trans
                         >;
                 };
