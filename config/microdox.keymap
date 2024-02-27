@@ -10,9 +10,8 @@
 
 #define DEFAULT        0
 #define CODE           1
-#define NUM_CONF       2
-#define MODS           3
-#define DOTA_SHIFT     4
+#define MODS           2
+#define DOTA_SHIFT     3
 
 / {
         keymap {
@@ -20,35 +19,26 @@
 
                 win_layer {
                         bindings = <
-                                &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &rpi C_VOLUME_DOWN U          &kp I              &rpi C_VOLUME_UP O            &rpi ESCAPE P      
-                                &rpi TAB A        &rpi LCTRL S        &rpi LALT D            &rpi_fast LSHIFT F      &rpi LCMD G                      &rpi RCMD H              &rpi_fast RSHIFT J            &rpi RALT K        &rpi RCTRL L                  &rpi_fast TAB SEMI
-                                &kp Z             &kp X               &rpi CAPSLOCK C        &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N                         &kp M              &tap_comma_mods               &tap_dot_ret      
-                                                                      &trans                 &trans                  &tap_num                         &rpi RET SPACE           &tap_code                     &mo MODS
+                                &kp Q             &kp W               &kp E                  &kp R                   &kp T                            &kp Y                    &kp U              &kp I              &kp O                         &rpi ESCAPE P      
+                                &kp A             &kp S               &kp D                  &kp F                   &kp G                            &kp H                    &kp J              &kp K              &kp L                         &rpi_fast TAB SEMI
+                                &kp Z             &kp X               &kp C                  &kp V                   &kp B                            &del_rpi DEL BSPC        &kp N              &kp M              &tap_comma_mods               &tap_dot_ret      
+                                                                      &kp LCTRL              &kp LCMD                &shift_caps_tap                  &rpi RET SPACE           &tap_code          &mo MODS
                         >;
                 };
                 code_layer {
                         bindings = <
-                                   &kp N1        &kp N2         &kp N3         &kp N4            &kp N5                         &rpi_fast EXCL BSLH      &rpi_fast QMARK SLASH    &kp LPAR               &kp RPAR                &rpi_fast PLUS EQUAL  
-                                   &rpi TAB N6   &rpi LCTRL N7  &rpi LALT N8   &rpi LSHIFT N9    &rpi LCMD N0                   &rpi_fast PIPE LT        &rpi_fast CARET GT       &rpi_fast LBKT LBRC    &rpi_fast RBKT RBRC     &rpi_fast SEMI COLON 
-                                   &trans        &kp LCTRL      &kp LALT       &kp LSHIFT        &kp LCMD                       &rpi_fast SQT DQT        &trans                   &trans                 &rpi_fast TILDE GRAVE   &rpi_fast UNDER MINUS
-                                                                &trans         &trans            &trans                         &trans                   &trans                   &trans
-                        >;
-                };
-
-                num_conf_layer {
-                        bindings = <
-                                   &rpi_fast EXCL N1    &rpi_fast AT N2     &rpi_fast HASH N3      &rpi_fast DLLR N4     &rpi_fast PRCNT N5                              &bt BT_PRV      &bt BT_NXT      &trans           &trans            &bt BT_CLR         
-                                   &rpi_fast CARET N6   &rpi_fast AMPS N7   &rpi_fast ASTRK N8     &rpi_fast LPAR N9     &rpi_fast RPAR N0                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4
-                                   &trans               &trans              &trans                 &trans                &trans                                          &trans          &trans          &trans           &trans            &trans      
-                                                                            &trans                 &trans                &trans                                          &trans          &trans          &trans
+                                   &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                         &rpi_fast EXCL BSLH      &rpi_fast QMARK SLASH    &kp LPAR               &kp RPAR                &rpi_fast PLUS EQUAL  
+                                   &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                         &rpi_fast PIPE LT        &rpi_fast CARET GT       &rpi_fast LBKT LBRC    &rpi_fast RBKT RBRC     &rpi_fast SEMI COLON 
+                                   &kp LCTRL     &kp LALT       &kp LSHIFT      &kp LCMD          &trans                         &rpi_fast SQT DQT        &trans                   &trans                 &rpi_fast TILDE GRAVE   &rpi_fast UNDER MINUS
+                                                                &trans          &trans            &trans                         &trans                   &trans                   &trans
                         >;
                 };
 
                 mods_layer {
                         bindings = <
-                                   &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &arrow_rpi PAGE_UP UP           &trans                     &trans
-                                   &trans      &trans      &trans        &trans          &trans                               &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &trans
-                                   &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &trans                          &trans                     &trans
+                                   &trans      &trans      &trans        &trans          &trans                               &trans       &kp C_VOLUME_DOWN             &arrow_rpi PAGE_UP UP        &kp C_VOLUME_UP            &bt BT_CLR 
+                                   &trans      &trans      &trans        &trans          &trans                               &trans       &arrow_rpi HOME LEFT       &arrow_rpi PAGE_DOWN DOWN       &arrow_rpi END RIGHT       &bt BT_NXT
+                                   &trans      &trans      &trans        &trans          &trans                               &trans       &trans                     &trans                          &trans                     &bt BT_PRV
                                                            &kp TAB       &kp LALT        &mo DOTA_SHIFT                       &trans       &trans                     &trans
                         >;
                 };
@@ -121,13 +111,6 @@
                     bindings = <&kp N5>, <&kp Y>;
                 };
 
-                tap_num: tap_num {
-                     compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&mo NUM_CONF>, <&tog NUM_CONF>;
-                };
-
                 tap_code: tap_code {
                      compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
@@ -154,6 +137,13 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <250>;
                     bindings = <&kp DOT>, <&kp RET>;
+                };
+
+                shift_caps_tap: shift_caps_tap {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <250>;
+                    bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
                 };
 
         };
