@@ -38,7 +38,7 @@
                         bindings = <
                                    &trans      &trans      &trans        &trans          &trans                               &bt BT_CLR       &kp C_VOLUME_DOWN          &kp UP        &kp C_VOLUME_UP    &kp ESCAPE 
                                    &trans      &trans      &trans        &trans          &trans                               &bt BT_NXT       &kp LEFT                   &kp DOWN      &kp RIGHT          &kp TAB
-                                   &trans      &trans      &trans        &trans          &trans                               &bt BT_PRV       &kp RCTRL                  &kp RATL      &kp RSHIFT         &kp RET
+                                   &trans      &trans      &trans        &trans          &trans                               &bt BT_PRV       &kp RCTRL                  &kp RALT      &kp RSHIFT         &kp RET
                                                            &kp TAB       &kp LALT        &mo DOTA_SHIFT                       &kp DEL          &trans                     &trans
                         >;
                 };
