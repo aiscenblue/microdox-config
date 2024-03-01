@@ -39,7 +39,7 @@
                         bindings = <
                                    &trans      &trans      &trans        &trans             &trans                               &trans           &kp C_VOLUME_DOWN          &kp UP        &kp C_VOLUME_UP    &kp ESCAPE 
                                    &trans      &trans      &trans        &trans             &trans                               &trans           &kp LEFT                   &kp DOWN      &kp RIGHT          &kp TAB
-                                   &trans      &trans      &trans        &trans             &trans                               &kp DEL          &kp RSHIFT                 &kp RALT      &kp RCTRL          &kp RET
+                                   &trans      &trans      &trans        &trans             &trans                               &kp DEL          &tap_shift                 &kp RALT      &kp RCTRL          &kp RET
                                                            &kp TAB       &mo DOTA_SHIFT     &kp LALT                             &trans           &mo SETTINGS               &trans
                         >;
                 };
@@ -154,6 +154,13 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <250>;
                     bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+                };
+
+                 tap_shift: tap_shift {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <350>;
+                    bindings = <&kp RSHIFT>, <&kt RSHIFT>;
                 };
 
         };
