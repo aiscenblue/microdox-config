@@ -37,10 +37,10 @@
 
                 mods_layer {
                         bindings = <
-                                   &trans      &trans      &trans        &trans          &trans                               &trans           &kp C_VOLUME_DOWN          &kp UP        &kp C_VOLUME_UP    &kp ESCAPE 
-                                   &trans      &trans      &trans        &trans          &trans                               &trans           &kp LEFT                   &kp DOWN      &kp RIGHT          &kp TAB
-                                   &trans      &trans      &trans        &trans          &trans                               &kp DEL          &kp RCTRL                  &kp RALT      &kp RSHIFT         &kp RET
-                                                           &kp TAB       &kp LALT        &mo DOTA_SHIFT                       &trans           &mo SETTINGS               &trans
+                                   &trans      &trans      &trans        &trans             &trans                               &trans           &kp C_VOLUME_DOWN          &kp UP        &kp C_VOLUME_UP    &kp ESCAPE 
+                                   &trans      &trans      &trans        &trans             &trans                               &trans           &kp LEFT                   &kp DOWN      &kp RIGHT          &kp TAB
+                                   &trans      &trans      &trans        &trans             &trans                               &kp DEL          &kp RSHIFT                 &kp RALT      &kp RCTRL          &kp RET
+                                                           &kp TAB       &mo DOTA_SHIFT     &kp LALT                             &trans           &mo SETTINGS               &trans
                         >;
                 };
 
