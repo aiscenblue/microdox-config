@@ -21,10 +21,10 @@
 
                 win_layer {
                         bindings = <
-                                &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R   &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &kp P      
+                                &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R   &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
                                 &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F     &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
-                                &kp Z               &kp X              &rpi_lyr CODE C    &kp V             &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &rpi_lyr MODS DOT      
-                                                                       &kp LCTRL          &kp LCMD          &shift_caps_tap                             &kp SPACE                &tap_code                  &tap_mods
+                                &kp Z               &kp X              &kp C              &kp V             &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
+                                                                       &kp LCTRL          &kp LCMD          &shift_caps_tap                             &kp SPACE                &mo CODE                   &mo MODS
                         >;
                 };
 
@@ -32,8 +32,8 @@
                         bindings = <
                                    &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                                 &kp BSLH                 &kp SLASH                &kp LPAR               &kp RPAR    &kp EQUAL  
                                    &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                                 &kp CARET                &kp ASTERISK             &kp LBKT               &kp RBKT    &kp SQT
-                                   &kp LCTRL     &kp LALT       &kp LSHIFT      &kp LCMD          &trans                                 &kp HASH                 &kp DOLLAR               &kp AMPERSAND          &kp GRAVE   &kp MINUS
-                                                                &trans          &trans            &trans                                 &trans                   &trans                   &trans
+                                   &trans        &trans         &trans          &trans            &trans                                 &kp HASH                 &kp DOLLAR               &kp AMPERSAND          &kp GRAVE   &kp MINUS
+                                                                &trans          &trans            &trans                                 &kp EXCL                 &kp AT                   &kp PRCNT
                         >;
                 };
 
@@ -57,10 +57,10 @@
 
                 dota_base_layer {
                         bindings = <
-                                   &kp Q     &kp W     &kp E    &kp R            &rpi Y T                            &mo DOTA_BASE   &trans       &kp PAGE_UP        &trans             &trans 
-                                   &kp A     &kp S     &kp D    &kp F            &kp G                               &trans          &kp HOME     &kp PAGE_DOWN      &kp END            &trans
-                                   &kp Z     &kp X     &kp C    &kp V            &kp B                               &trans          &trans       &trans             &trans          &trans
-                                                       &kp TAB  &mo DOTA_SHIFT   &kp LALT                            &kp RSHIFT      &kp RCTRL    &trans
+                                   &kp Q     &kp W          &kp E         &kp R            &rpi Y T                            &mo DOTA_BASE   &trans       &kp PAGE_UP        &trans          &trans 
+                                   &kp A     &rpi LCTRL S   &rpi LALT D   &rpi LSHIFT F    &kp G                               &trans          &kp HOME     &kp PAGE_DOWN      &kp END         &trans
+                                   &kp Z     &kp X          &kp C         &kp V            &kp B                               &trans          &trans       &trans             &trans          &trans
+                                                            &kp TAB       &mo DOTA_SHIFT   &kp LALT                            &trans          &trans       &trans
                         >;
                 };
 
@@ -145,25 +145,11 @@
                     bindings = <&kp>, <&kp>;
                 };
 
-                tap_code: tap_code {
-                     compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&mo CODE>, <&tog CODE>;
-                };
-
                 tap_ret_space: tap_ret_space {
                      compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
                     tapping-term-ms = <350>;
                     bindings = <&kp SPACE>, <&kp RET>;
-                };
-
-                tap_mods: tap_mods {
-                     compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <350>;
-                    bindings = <&mo MODS>, <&tog MODS>;
                 };
 
                 tap_dot_ret: tap_dot_ret {
