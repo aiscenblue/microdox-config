@@ -12,6 +12,8 @@
 #define CODE           1
 #define MODS           2  
 #define SETTINGS       3
+#define DOTA_BASE      4
+#define DOTA_SHIFT     5
 
 / {
         keymap {
@@ -21,7 +23,7 @@
                         bindings = <
                                 &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R   &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &kp P      
                                 &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F     &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
-                                &rpi_lyr CODE Z     &rpi_lyr MODS X    &rpi_lyr CODE C    &kp V             &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &rpi_lyr MODS DOT      
+                                &kp Z               &kp X              &rpi_lyr CODE C    &kp V             &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &rpi_lyr MODS DOT      
                                                                        &kp LCTRL          &kp LCMD          &shift_caps_tap                             &kp SPACE                &tap_code                  &tap_mods
                         >;
                 };
@@ -39,8 +41,8 @@
                         bindings = <
                                    &kp F1      &kp F2      &kp F3        &kp F4             &kp F5                               &trans           &kp C_VOLUME_DOWN          &kp UP        &kp C_VOLUME_UP    &kp ESCAPE 
                                    &kp F6      &kp F7      &kp F8        &kp F9             &kp F10                              &trans           &kp LEFT                   &kp DOWN      &kp RIGHT          &kp TAB
-                                   &kp F11     &kp F12     &kp F13       &kp F14            &kp F15                              &kp DEL          &tap_shift                 &kp RALT      &kp RCTRL          &kp RET
-                                                           &trans        &trans             &trans                               &kp RET          &mo SETTINGS               &trans
+                                   &kp F11     &kp F12     &kp F13       &kp F14            &kp F15                              &kp DEL          &trans                     &trans        &trans             &kp RET
+                                                           &trans        &trans             &tap_dota_base                       &kp RET          &mo SETTINGS               &trans
                         >;
                 };
 
@@ -50,6 +52,24 @@
                                    &trans          &trans      &trans        &trans          &trans                               &trans       &trans       &trans        &trans             &trans
                                    &trans          &trans      &trans        &trans          &trans                               &trans       &trans       &trans        &trans             &trans
                                                                &trans        &trans          &trans                               &trans       &trans       &trans
+                        >;
+                };
+
+                dota_base_layer {
+                        bindings = <
+                                   &kp Q     &kp W     &kp E    &kp R   &kp T                               &trans       &trans       &kp PAGE_UP        &trans             &trans 
+                                   &kp A     &kp S     &kp D    &kp F   &kp G                               &trans       &HOME        &PAGE_DOWN         &END               &trans
+                                   &kp Z     &kp X     &kp C    &kp V   &kp B                               &trans       &trans       &trans             &trans             &trans
+                                                       &kp TAB  &trans  &mo DOTA_SHIFT                      &trans       &trans       &trans
+                        >;
+                };
+
+                dota_shift_layer {
+                        bindings = <
+                                   &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                                 &kp BSLH                 &kp SLASH                &kp LPAR               &kp RPAR    &kp EQUAL  
+                                   &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                                 &kp CARET                &kp ASTERISK             &kp LBKT               &kp RBKT    &kp SQT
+                                   &kp F1        &kp F2         &F3             &F4               &F5                                    &kp HASH                 &kp DOLLAR               &kp AMPERSAND          &kp GRAVE   &kp MINUS
+                                                                &trans          &trans            &kp Y                                  &trans                   &trans                   &trans
                         >;
                 };
         };
@@ -165,6 +185,13 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <350>;
                     bindings = <&kp RSHIFT>, <&kt RSHIFT>;
+                };
+
+                tap_dota_base: stap_dota_base {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <350>;
+                    bindings = <&mo DOTA_BASE>, <&tog DOTA_BASE>;
                 };
 
         };
