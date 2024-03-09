@@ -57,10 +57,10 @@
 
                 dota_base_layer {
                         bindings = <
-                                   &kp Q     &kp W     &kp E    &kp R   &kp T                               &trans       &trans       &kp PAGE_UP        &trans             &trans 
-                                   &kp A     &kp S     &kp D    &kp F   &kp G                               &trans       &kp HOME     &kp PAGE_DOWN      &kp END            &trans
-                                   &kp Z     &kp X     &kp C    &kp V   &kp B                               &trans       &trans       &trans             &trans             &trans
-                                                       &kp TAB  &trans  &mo DOTA_SHIFT                      &trans       &trans       &trans
+                                   &kp Q     &kp W     &kp E    &kp R     &rpi Y T                            &trans       &trans       &kp PAGE_UP        &trans             &trans 
+                                   &kp A     &kp S     &kp D    &kp F     &kp G                               &trans       &kp HOME     &kp PAGE_DOWN      &kp END            &trans
+                                   &kp Z     &kp X     &kp C    &kp V     &kp B                               &trans       &trans       &trans             &trans             &trans
+                                                       &kp TAB  &kp LALT  &mo DOTA_SHIFT                      &trans       &trans       &trans
                         >;
                 };
 
@@ -69,7 +69,7 @@
                                    &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                                 &kp BSLH                 &kp SLASH                &kp LPAR               &kp RPAR    &kp EQUAL  
                                    &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                                 &kp CARET                &kp ASTERISK             &kp LBKT               &kp RBKT    &kp SQT
                                    &kp F1        &kp F2         &kp F3          &kp F4            &kp F5                                 &kp HASH                 &kp DOLLAR               &kp AMPERSAND          &kp GRAVE   &kp MINUS
-                                                                &trans          &trans            &kp Y                                  &trans                   &trans                   &trans
+                                                                &trans          &trans            &&tap_dota_base                        &trans                   &trans                   &trans
                         >;
                 };
         };
