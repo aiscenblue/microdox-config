@@ -21,19 +21,19 @@
 
                 win_layer {
                         bindings = <
-                                &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R   &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
-                                &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F     &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
-                                &kp Z               &kp X              &rpi CAPSLOCK C    &kp V             &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
-                                                                       &mo SETTINGS       &mo MODS          &mo CODE                                    &kp SPACE                &mo CODE                   &mo MODS
+                                &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R           &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
+                                &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F             &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
+                                &kp Z               &kp X              &rpi CAPSLOCK C    &kp V                     &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
+                                                                       &mo SETTINGS       &rpi_toglyr MODS MODS     &rpi_toglyr CODE CODE                       &kp SPACE                &rpi_toglyr CODE CODE      &rpi_toglyr MODS MODS
                         >;
                 };
 
                 code_layer {
                         bindings = <
                                    &kp N1        &kp N2         &kp N3          &kp N4            &kp N5                                 &kp BSLH                 &kp SLASH                &kp LPAR               &kp RPAR    &kp EQUAL  
-                                   &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                                 &kp CARET                &kp ASTERISK             &kp LBKT               &kp RBKT    &kp SQT
-                                   &trans        &trans         &trans          &trans            &trans                                 &kp HASH                 &kp DOLLAR               &kp AMPERSAND          &kp GRAVE   &kp MINUS
-                                                                &trans          &trans            &trans                                 &kp EXCL                 &kp AT                   &kp PRCNT
+                                   &kp N6        &kp N7         &kp N8          &kp N9            &kp N0                                 &kp EXCL                 &kp AT                   &kp LBKT               &kp RBKT    &kp SQT
+                                   &trans        &trans         &trans          &trans            &trans                                 &kp HASH                 &kp DOLLAR               &kp PRCNT              &kp GRAVE   &kp MINUS
+                                                                &trans          &trans            &trans                                 &kp CARET                &kp AMPS                 &kp ASTRK
                         >;
                 };
 
