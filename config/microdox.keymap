@@ -23,8 +23,8 @@
                         bindings = <
                                 &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R   &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
                                 &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F     &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
-                                &kp Z               &kp X              &kp C              &kp V             &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
-                                                                       &kp LCTRL          &kp LCMD          &shift_caps_tap                             &kp SPACE                &mo CODE                   &mo MODS
+                                &kp Z               &kp X              &rpi CAPSLOCK C    &kp V             &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
+                                                                       &mo SETTINGS       &mo MODS          &mo CODE                                    &kp SPACE                &mo CODE                   &mo MODS
                         >;
                 };
 
