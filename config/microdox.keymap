@@ -24,7 +24,7 @@
                                 &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R           &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
                                 &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F             &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
                                 &kp Z               &kp X              &rpi CAPSLOCK C    &kp V                     &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
-                                                                       &mo SETTINGS       &rpi_toglyr MODS MODS     &rpi_toglyr CODE CODE                       &kp SPACE                &rpi_toglyr CODE CODE      &rpi_toglyr MODS MODS
+                                                                       &mo SETTINGS       &tap_mode                 &tap_code                                   &kp SPACE                &tap_code                  &tap_mode
                         >;
                 };
 
@@ -178,6 +178,20 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <350>;
                     bindings = <&mo DOTA_BASE>, <&tog DOTA_BASE>;
+                };
+
+                tap_mode: tap_mode {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <350>;
+                    bindings = <&mo MODS>, <&tog MODS>;
+                };
+
+                tap_code: tap_code {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <350>;
+                    bindings = <&mo CODE>, <&tog CODE>;
                 };
 
         };
