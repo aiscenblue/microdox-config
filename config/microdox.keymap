@@ -11,7 +11,7 @@
 #define DEFAULT        0
 #define CODE           1
 #define MODS           2  
-#define SETTINGS       3
+#define CONFIG       3
 #define DOTA_BASE      4
 #define DOTA_SHIFT     5
 
@@ -24,7 +24,7 @@
                                 &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R           &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
                                 &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F             &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
                                 &kp Z               &kp X              &rpi CAPSLOCK C    &kp V                     &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
-                                                                       &mo SETTINGS       &tap_mode                 &tap_code                                   &kp SPACE                &tap_code                  &tap_mode
+                                                                       &mo CONFIG         &tap_mode                 &tap_code                                   &kp SPACE                &tap_code                  &tap_mode
                         >;
                 };
 
@@ -42,15 +42,15 @@
                                    &kp F1      &kp F2      &kp F3        &kp F4             &kp F5                               &tap_dota_base   &kp C_VOLUME_DOWN          &kp UP        &kp C_VOLUME_UP    &kp ESCAPE 
                                    &kp F6      &kp F7      &kp F8        &kp F9             &kp F10                              &trans           &kp LEFT                   &kp DOWN      &kp RIGHT          &kp TAB
                                    &kp F11     &kp F12     &kp F13       &kp F14            &kp F15                              &kp DEL          &trans                     &trans        &trans             &kp RET
-                                                           &trans        &trans             &trans                               &kp RET          &mo SETTINGS               &trans
+                                                           &trans        &trans             &mo CONFIG                         &kp RET          &trans                     &trans
                         >;
                 };
 
-                settings_layer {
+                config_layer {
                         bindings = <
-                                   &bt BT_CLR      &trans      &trans        &bt BT_PRV      &bt BT_NXT                           &trans       &trans       &trans        &trans             &trans 
-                                   &trans          &trans      &trans        &trans          &trans                               &trans       &trans       &trans        &trans             &trans
-                                   &trans          &trans      &trans        &trans          &trans                               &trans       &trans       &trans        &trans             &trans
+                                   &bt BT_CLR      &trans      &trans        &bt BT_PRV      &bt BT_NXT                           &trans       &trans       &kp PAGE_UP        &trans        &trans 
+                                   &trans          &trans      &trans        &trans          &trans                               &trans       &kp HOME     &kp PAGE_DOWN      &kp END       &trans
+                                   &trans          &trans      &trans        &trans          &trans                               &trans       &trans       &trans             &trans        &trans
                                                                &trans        &trans          &trans                               &trans       &trans       &trans
                         >;
                 };
