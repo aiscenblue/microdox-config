@@ -21,9 +21,9 @@
 
                 win_layer {
                         bindings = <
-                                &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R           &kp T                                       &kp Y                    &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
-                                &rpi GLOBE A        &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F             &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &kp SEMI
-                                &kp Z               &kp X              &rpi CAPSLOCK C    &kp V                     &kp B                                       &kp BSPC                 &kp N                      &kp M              &kp COMMA           &kp DOT      
+                                &rpi ESCAPE Q       &kp W              &rpi_lyr MODS E    &rpi_lyr CODE R           &rpi K_UNDO T                               &rpi K_REDO Y            &rpi_lyr CODE U            &rpi_lyr MODS I    &kp O               &rpi ESCAPE P      
+                                &rpi LCMD A         &rpi LCTRL S       &rpi LALT D        &rpi LSHIFT F             &rpi LCMD G                                 &rpi RCMD H              &rpi RSHIFT J              &rpi RALT K        &rpi RCTRL L        &rpi LCMD SEMI
+                                &rpi GLOBE Z        &rpi K_CUT X       &rpi K_COPY C      &rpi K_PASTE V            &rpi CAPSLOCK B                             &kp BSPC                 &kp N                      &kp M              &kp COMMA           &rpi GLOBE DOT      
                                                                        &mo CONFIG         &tap_mode                 &tap_code                                   &kp SPACE                &tap_code                  &tap_mode
                         >;
                 };
