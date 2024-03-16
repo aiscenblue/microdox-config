@@ -11,7 +11,7 @@
 #define DEFAULT        0
 #define CODE           1
 #define MODS           2  
-#define CONFIG       3
+#define CONFIG         3
 #define DOTA_BASE      4
 #define DOTA_SHIFT     5
 
@@ -110,8 +110,8 @@
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
                     tapping-term-ms = <250>;
-                    quick-tap-ms = <0>;
-                    require-prior-idle-ms = <100>;
+                    quick-tap-ms = <-1>;
+                    require-prior-idle-ms = <-1>;
                     bindings = <&mo>, <&kp>;
                 };
 
