@@ -80,8 +80,8 @@
                     #binding-cells = <2>;
                     flavor = "tap-preferred";
                     tapping-term-ms = <250>;
-                    quick-tap-ms = <50>;
-                    require-prior-idle-ms = <150>;
+                    quick-tap-ms = <-1>;
+                    require-prior-idle-ms = <100>;
                     bindings = <&kp>, <&kp>;
                 };
 
@@ -92,6 +92,16 @@
                     tapping-term-ms = <150>;
                     quick-tap-ms = <50>;
                     require-prior-idle-ms = <150>;
+                    bindings = <&kp>, <&kp>;
+                };
+
+                rpi_dota: rpi_dota {
+                    compatible = "zmk,behavior-hold-tap";
+                    #binding-cells = <2>;
+                    flavor = "tap-preferred";
+                    tapping-term-ms = <250>;
+                    quick-tap-ms = <-1>;
+                    require-prior-idle-ms = <100>;
                     bindings = <&kp>, <&kp>;
                 };
 
