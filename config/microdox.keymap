@@ -48,7 +48,7 @@
 
                 config_layer {
                         bindings = <
-                                   &bt BT_CLR      &trans      &trans        &bt BT_PRV      &bt BT_NXT                           &trans       &trans       &kp PAGE_UP        &trans        &trans 
+                                   &bt BT_CLR      &trans      &trans        &bt BT_PRV      &bt BT_NXT                           &bt BT_NXT   &bt BT_PRV   &kp PAGE_UP        &trans        &bt BT_CLR 
                                    &trans          &trans      &trans        &trans          &trans                               &trans       &kp HOME     &kp PAGE_DOWN      &kp END       &trans
                                    &trans          &trans      &trans        &trans          &trans                               &trans       &trans       &trans             &trans        &trans
                                                                &trans        &trans          &trans                               &trans       &trans       &trans
